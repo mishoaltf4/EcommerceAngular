@@ -1,1 +1,36 @@
-<p>header works!</p>
+<header>
+      <div class="header-top w-full h-10 bg-[#000]  flex items-center justify-center">
+        <p class="text-p text-Neutral/White/W900">Get 25% OFF on your first order. Order Now</p>
+      </div>
+  <div class="container">
+    <div class="header-inner w-full h-full">
+      <div class="header-bottom h-20 flex items-center justify-between max-[650px]:justify-center">
+        <img src="./site-logo.svg" alt="Logo">
+        <nav class="max-phone:hidden max-[650px]:hidden">
+          <ul>
+            <li class="flex gap-8">
+              <a href="">Home</a>
+              <a href="">Category</a>
+              <a href="">About</a>
+              <a href="">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="right max-phone:hidden max-tablet:hidden flex items-center gap-2">
+          <div class="inputs">
+            <mat-form-field appearance="outline" class="custom-search-field">
+              <mat-icon matTextPrefix class="text-Neutral/Black/B400">search</mat-icon>
+              <input type="text" matInput [(ngModel)]="value" class="h-4">
+              @if (value) {
+                <mat-icon (click)="value=''" matSuffix class="cursor-pointer">close</mat-icon>
+              }
+            </mat-form-field>
+          </div>
+          <mat-icon class="text-Neutral/Black/B500">shopping_cart</mat-icon>
+          <mat-icon class="text-Neutral/Black/B500">account_circle</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

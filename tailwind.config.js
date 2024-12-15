@@ -5,6 +5,8 @@ module.exports = {
   ],
   theme: {
     colors: {
+      //transparent
+      'transparent': 'transparent',
       // Blue
       'Primary/B900': '#4078FF',
       'Primary/B800': '#5C83FF',
@@ -71,8 +73,9 @@ module.exports = {
       'span': '12px',
     },
     screens: {
-      sm: '390px',
-      md: '1024px',
+      'phone': '390px',
+      'tablet': '1024px',
+      'desktop': '2000px'
     },
 
     extend: {}

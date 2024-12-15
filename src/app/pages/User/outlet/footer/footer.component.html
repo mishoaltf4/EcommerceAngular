@@ -1,1 +1,67 @@
-<p>footer works!</p>
+<footer class="w-full h-full">
+  <div class="top w-full h-52 bg-Neutral/White/W100">
+    <div class="container">
+      <div class="top-inner w-full h-52 flex items-center justify-between max-tablet:flex-col max-tablet:justify-around max-phone:justify-center max-phone:text-center">
+        <div class="text max-tablet:text-center">
+          <h3 class="text-h3">Join Our Newsletter</h3>
+          <p class="mt-1">We love to surprise our subscribers with occasional gifts.</p>
+        </div>
+        <div class="email flex gap-1 max-tablet:flex-col">
+          <input type="email" placeholder="Your email address" class="w-4/6 h-11 bg-transparent border border-Neutral/Black/B400 pl-2 text-[18px] max-tablet:w-full">
+          <button class="w-28 h-11 bg-Neutral/Black/B900 text-Neutral/White/W900 max-tablet:w-full">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom mt-20">
+    <div class="container">
+      <div class="bottom-inner flex justify-between max-phone:items-center max-phone:justify-center">
+        <div class="left flex flex-col gap-3 text-center items-center">
+          <img src="./site-logo.svg" alt="" class="w-40">
+          <p class="w-72">DevCut is a YouTube channel for practical project-based learning.</p>
+          <div class="icons flex gap-6">
+            <img src="./Icons/Social/Github.svg" alt="">
+            <img src="./Icons/Social/Instagram.svg" alt="">
+            <img src="./Icons/Social/Youtube.svg" alt="">
+          </div>
+        </div>
+
+        <div class="middle max-phone:hidden">
+          <nav class="flex gap-16">
+            <ul>
+              <li>SUPPORT</li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Terms of use</a></li>
+              <li><a href="">Privacy Policy</a></li>
+            </ul>
+            <ul>
+              <li>COMPANY</li>
+              <li><a href="">About us</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Careers</a></li>
+            </ul>
+            <ul>
+              <li>SHOP</li>
+              <li><a href="">My Account</a></li>
+              <li><a href="">Checkout</a></li>
+              <li><a href="">Cart</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="right max-tablet:hidden">
+          <p>ACCEPTED PAYMENTS</p>
+          <div class="icons flex gap-4 mt-4">
+            <img src="./Icons/Payments/Mastercard.svg" alt="">
+            <img src="./Icons/Payments/Amex.svg" alt="">
+            <img src="./Icons/Payments/Visa.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="rights mt-24 relative before:content-[''] before:border-t before:border-Neutral/White/W100 before:absolute before:w-full">
+        <p class="text-center pt-5">© 2023 DevCut. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>

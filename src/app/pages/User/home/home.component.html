@@ -1,7 +1,108 @@
 <app-header />
-<div class="home">
-  <div class="contaienr">
-    <div class="home-inner"></div>
+<div class="home w-full">
+  <div class="fresh w-full h-[440px] bg-Neutral/White/W100">
+      <div class="container">
+        <div class="fresh-inner flex flex-col w-full h-[440px] justify-center">
+          <div class="text">
+            <h2 class="text-h2 mb-3">Fresh Arrivals Online</h2>
+            <p>Discover Our Newest Collection Today.</p>
+          </div>
+          <button class="w-44 h-11 mt-12 bg-Neutral/Black/B900 text-Neutral/White/W900 flex items-center justify-center">View Collection <mat-icon>arrow_forward</mat-icon></button>
+        </div>
+      </div>
+  </div>
+
+  <div class="features">
+    <div class="container">
+      <div class="features-inner grid grid-cols-[repeat(auto-fit,minmax(0,328px))] justify-between max-tablet:grid-cols-2 max-phone:grid-cols-1 max-phone:gap-20">
+        <div class="box">
+          <div class="icon">
+            <mat-icon>local_shipping</mat-icon>
+          </div>
+          <h5 class="text-h5 font-bold">Free Shipping</h5>
+          <p class="text-Neutral/Black/B500">Upgrade your style today and get FREE shipping on all orders! Don't miss out.</p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <mat-icon>new_releases</mat-icon>
+          </div>
+          <h5 class="text-h5 font-bold">Free Shipping</h5>
+          <p class="text-Neutral/Black/B500">Upgrade your style today and get FREE shipping on all orders! Don't miss out.</p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <mat-icon>verified_user</mat-icon>
+          </div>
+          <h5 class="text-h5 font-bold">Free Shipping</h5>
+          <p class="text-Neutral/Black/B500">Upgrade your style today and get FREE shipping on all orders! Don't miss out.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="best-selling mb-40">
+    <div class="container">
+      <div class="best-selling__inner">
+        <div class="header mb-20 text-center">
+          <p class="uppercase text-Neutral/Black/B400">shop now</p>
+          <h3 class="text-h3 capitalize font-bold">best selling</h3>
+        </div>
+
+        <div class="clothes grid grid-cols-[repeat(auto-fit,minmax(0,237px))] justify-between max-tablet:grid-cols-2 max-tablet:gap-y-20 max-phone:grid-cols-1 max-phone:flex max-phone:flex-col max-phone:items-center ">
+          <div class="box flex flex-col gap-6" *ngFor="let product of products">
+            <div class="img w-[237px] h-[312px] bg-Neutral/White/W100">
+              <img src="{{product.img}}" alt="">
+            </div>
+            <div class="text">
+              <p class="text-p font-semibold">{{product.title}}</p>
+              <div class="col flex mt-3 gap-4">
+                <span class="text-p border rounded-xl pl-3 pr-3">{{product.inStock ? 'In Stock' : 'Out of Stock'}}</span>
+                <p>${{product.price.toFixed(2)}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fashion w-full h-[304px] bg-Neutral/White/W100">
+    <div class="container">
+      <div class="fashion-inner flex w-full h-[304px] items-center justify-between">
+        <div class="text flex flex-col gap-6">
+          <h3 class="text-h3 font-bold">Browse Our Fashion Paradise!</h3>
+          <p class="text-p">Step into a world of style and explore our diverse collection of clothing categories.</p>
+          <button class="w-[177px] h-11 bg-Neutral/Black/B900 text-Neutral/White/W900 flex items-center justify-center">Start Browsing <mat-icon>arrow_forward</mat-icon></button>
+        </div>
+        <img src="./homePage/fashion.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="product-list mt-[155px] mb-[175px]">
+    <div class="container">
+      <div class="product-list__inner">
+        <div class="btns flex mb-12 items-center justify-center gap-6">
+          <button>Featured</button>
+          <button>Latest</button>
+        </div>
+
+        <div class="clothes grid grid-cols-[repeat(auto-fit,minmax(0,237px))] justify-between max-tablet:grid-cols-2 max-tablet:gap-y-20 max-phone:grid-cols-1 max-phone:flex max-phone:flex-col max-phone:items-center ">
+          <div class="box flex flex-col gap-6" *ngFor="let product of products">
+            <div class="img w-[237px] h-[312px] bg-Neutral/White/W100">
+              <img src="{{product.img}}" alt="">
+            </div>
+            <div class="text">
+              <p class="text-p font-semibold">{{product.title}}</p>
+              <div class="col flex mt-3 gap-4">
+                <span class="text-p border rounded-xl pl-3 pr-3">{{product.inStock ? 'In Stock' : 'Out of Stock'}}</span>
+                <p>${{product.price.toFixed(2)}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <app-footer />

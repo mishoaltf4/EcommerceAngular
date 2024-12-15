@@ -1,0 +1,27 @@
+.custom-search-field{
+  width: 245px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+
+  .mat-form-wrapper{
+    padding: 0;
+    height: 100%;
+
+  }
+
+  .mat-form-field-outline {
+    border-radius: 8px; /* Rounded corners */
+  }
+
+  .mat-input-element {
+    padding: 10px; /* Vertically center text inside */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Darker text color */
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: #f8f8f8; /* Light background */
+  }
+
+}

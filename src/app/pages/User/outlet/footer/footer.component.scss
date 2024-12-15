@@ -1,0 +1,16 @@
+ul{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  li:first-of-type{
+    color: #878A92;
+    margin-bottom: calc(40px - 16px);
+  }
+}
+
+.right{
+  img{
+    filter: grayscale(100%);
+  }
+}
