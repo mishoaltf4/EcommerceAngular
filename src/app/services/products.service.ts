@@ -58,6 +58,10 @@ export class ProductsService {
     return this.products;
   }
 
+  getProductsId(): Promise<number[]> {
+    return Promise.resolve(this.products.map(product => product.id));
+  }
+
   getProductById(id: number): IProduct | undefined {
     return this.products.find(product => product.id === id);
   }
