@@ -1,8 +1,69 @@
 <app-header />
-<div class="single-product">
+<div class="single-product mt-14 mb-14">
   <div class="container">
-    <div class="single-product__inner">
+    <div class="single-product__inner w-full h-full ">
+      <div class="product flex justify-between w-full h-[575px] max-tablet:flex-col max-tablet:h-full max-tablet:items-center max-tablet:gap-6">
 
+        <div class="img w-[50%] h-full bg-Neutral/White/W100 flex justify-center items-center overflow-hidden max-tablet:w-full">
+          <img src="{{product?.img}}" alt="" class="w-[100%]">
+        </div>
+
+        <div class="content w-[40%] flex flex-col gap-6 max-tablet:w-full max-tablet:gap-2">
+          <h3 class="text-h3 font-bold">{{product?.title}}</h3>
+          <div class="info">
+            <div class="reviews"></div>
+            <span class="border  pl-2 pr-2 rounded-xl">{{product?.inStock ? 'In Stock' : 'Out of Stock'}}</span>
+          </div>
+          <h4 class="price text-h4 font-semibold">$ {{product?.price?.toFixed(2)}}</h4>
+          <div class="colours">
+            <p class="text-p uppercase">Available Colors</p>
+            <div class="box h-10 mt-1"></div>
+          </div>
+          <div class="sizes">
+            <p class="text-p uppercase">Select Size</p>
+            <div class="box h-10 mt-1"></div>
+          </div>
+          <div class="quantity">
+            <p class="text-p uppercase">Quantity</p>
+            <input type="text" class="h-10 mt-1">
+          </div>
+          <div class="btns flex gap-4 items-center">
+            <button class="w-[284px] h-11 bg-Neutral/Black/B900 text-Neutral/White/W900">Add to cart</button>
+            <mat-icon>favorite</mat-icon>
+          </div>
+          <p class="text-p uppercase underline">— Free shipping on orders $100+</p>
+        </div>
+      </div>
+
+      <mat-tab-group mat-stretch-tabs class="mt-[175px] max-phone:mt-[100px]">
+        <mat-tab label="Details">
+          <div class="right w-full flex flex-col gap-4 max-phone:text-center mt-4">
+            <h5 class="text-h5 font-semibold">Details</h5>
+            <p class="text-p">{{product?.detail}}</p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Reviews"></mat-tab>
+      </mat-tab-group>
+
+      <div class="more-products mt-[176px]">
+        <h3 class="text-h3 font-bold">You might also like</h3>
+        <p class="text-p uppercase text-Neutral/Black/B400">SIMILAR PRODUCTS</p>
+
+        <div class="clothes mt-12 grid grid-cols-[repeat(auto-fit,minmax(0,237px))] justify-between max-tablet:grid-cols-2 max-tablet:gap-y-20 max-phone:grid-cols-1 max-phone:flex max-phone:flex-col max-phone:items-center ">
+          <div class="box flex flex-col gap-6 cursor-pointer" *ngFor="let product of products" (click)="goToProduct(product.id)">
+            <div class="img w-[237px] h-[312px] bg-Neutral/White/W100">
+              <img src="{{product.img}}" alt="">
+            </div>
+            <div class="text">
+              <p class="text-p font-semibold">{{product.title}}</p>
+              <div class="col flex mt-3 gap-4">
+                <span class="text-p border rounded-xl pl-3 pr-3">{{product.inStock ? 'In Stock' : 'Out of Stock'}}</span>
+                <p>${{product.price.toFixed(2)}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

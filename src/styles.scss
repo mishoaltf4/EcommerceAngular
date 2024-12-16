@@ -39,6 +39,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background: #202533;
   color: #fff;
 
+  header{
+    background: #47516e;
+  }
+
   .fresh{
     background: #47516e;
   }
@@ -62,6 +66,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .clothes{
     .img{
       background: #47516e;
+    }
+  }
+
+  .single-product{
+    .single-product__inner{
+      .img{
+        background: #47516e;
+      }
+
+      .content{
+        input{
+          color: #000;
+        }
+      }
     }
   }
 }

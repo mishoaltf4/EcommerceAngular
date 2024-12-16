@@ -28,8 +28,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.products = this.productsService.getProducts();
   }
-
-  goToProduct(productId: number): void{
-    this.router.navigate(['/product', productId]);
+  goToProduct(productId: number): void {
+    this.productsService.goToProduct(productId);
   }
 }
