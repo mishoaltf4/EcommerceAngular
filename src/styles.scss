@@ -34,3 +34,34 @@ h1{
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.dark{
+  background: #202533;
+  color: #fff;
+
+  .fresh{
+    background: #47516e;
+  }
+
+  .features-inner{
+    .icon{
+      color: #000;
+    }
+  }
+
+  .fashion{
+    background: #47516e;
+  }
+
+  footer{
+    .top{
+      background: #47516e;
+    }
+  }
+
+  .clothes{
+    .img{
+      background: #47516e;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { OnInit} from '@angular/core';
 import {ProductsService} from '../../../services/products.service';
 import {IProduct} from '../../../interfaces/products/ProductsInterface';
 import {CommonModule} from '@angular/common';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -21,10 +22,14 @@ import {CommonModule} from '@angular/common';
 export class HomeComponent implements OnInit {
   products: IProduct[] = [];
 
-  constructor(private productsService: ProductsService) {
+  constructor(private productsService: ProductsService, private router: Router) {
   }
 
   ngOnInit() {
     this.products = this.productsService.getProducts();
+  }
+
+  goToProduct(productId: number): void{
+    this.router.navigate(['/product', productId]);
   }
 }

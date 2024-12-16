@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{html,ts}",
   ],
+  darkMode: 'class ',
   theme: {
     colors: {
       //transparent
@@ -61,6 +62,9 @@ module.exports = {
       'Semantic/Yellow/R600': '#FBC862',
       'Semantic/Yellow/R500': '#FDCF76',
       'Semantic/Yellow/R400': '#FFD58A',
+
+      //darkMode:
+      'dark-text:': 'var(--)'
     },
     fontSize:{
       'h1': '40px',

@@ -49,7 +49,7 @@
         </div>
 
         <div class="clothes grid grid-cols-[repeat(auto-fit,minmax(0,237px))] justify-between max-tablet:grid-cols-2 max-tablet:gap-y-20 max-phone:grid-cols-1 max-phone:flex max-phone:flex-col max-phone:items-center ">
-          <div class="box flex flex-col gap-6" *ngFor="let product of products">
+          <div class="box flex flex-col gap-6 cursor-pointer" *ngFor="let product of products" (click)="goToProduct(product.id)">
             <div class="img w-[237px] h-[312px] bg-Neutral/White/W100">
               <img src="{{product.img}}" alt="">
             </div>
@@ -74,7 +74,7 @@
           <p class="text-p">Step into a world of style and explore our diverse collection of clothing categories.</p>
           <button class="w-[177px] h-11 bg-Neutral/Black/B900 text-Neutral/White/W900 flex items-center justify-center">Start Browsing <mat-icon>arrow_forward</mat-icon></button>
         </div>
-        <img src="./homePage/fashion.png" alt="">
+        <img src="./homePage/fashion.png" alt="" class="max-phone:hidden max-tablet:hidden">
       </div>
     </div>
   </div>
