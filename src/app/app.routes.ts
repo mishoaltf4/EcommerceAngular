@@ -6,6 +6,6 @@ import {SingleProductComponent} from './pages/User/single-product/single-product
 export const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path: 'home', component: HomeComponent},
-  {path: 'product/:id', component: SingleProductComponent},
+  // {path: 'product/:id',  component: SingleProductComponent},
   {path: '**', component: ErrorPageComponent}
 ];

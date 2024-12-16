@@ -2,6 +2,13 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.5.
 
+## Libraries:
+
+> [tailwindCss](https://tailwindcss.com/docs/guides/angular), [Angular Material Ui](https://material.angular.io/),
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
 ## Development server
 
 To start a local development server, run:
