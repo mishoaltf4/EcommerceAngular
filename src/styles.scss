@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --dark-theme-body: #0e0e0e;
+  --dark-theme-block: #1a1a1a;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -36,15 +41,15 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .dark{
-  background: #202533;
+  background: var(--dark-theme-body);
   color: #fff;
 
   header{
-    background: #47516e;
+    background: var(--dark-theme-block);
   }
 
   .fresh{
-    background: #47516e;
+    background: var(--dark-theme-block);
   }
 
   .features-inner{
@@ -54,25 +59,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
   .fashion{
-    background: #47516e;
+    background: var(--dark-theme-block);
   }
 
   footer{
     .top{
-      background: #47516e;
+      background: var(--dark-theme-block);
     }
   }
 
   .clothes{
     .img{
-      background: #47516e;
+      background: var(--dark-theme-block);
     }
   }
 
   .single-product{
     .single-product__inner{
       .img{
-        background: #47516e;
+        background: var(--dark-theme-block);
       }
 
       .content{

@@ -77,9 +77,11 @@ module.exports = {
       'span': '12px',
     },
     screens: {
-      'phone': '390px',
-      'tablet': '1024px',
-      'desktop': '2000px'
+      'phone': '480px',
+      'tabletMin': '481px',
+      'tabletMax': '768px',
+      'laptopMin': '769px',
+      'laptopMax': '1279px',
     },
 
     extend: {}

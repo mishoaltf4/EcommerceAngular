@@ -6,8 +6,8 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 > [tailwindCss](https://tailwindcss.com/docs/guides/angular), [Angular Material Ui](https://material.angular.io/),
 
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
+> [!NOTE]
+> [Preview](ecommerce-angular-jade.vercel.app)
 
 ## Development server
 

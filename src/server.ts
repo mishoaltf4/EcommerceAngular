@@ -13,19 +13,6 @@ const browserDistFolder = resolve(serverDistFolder, '../browser');
 
 const app = express();
 const angularApp = new AngularNodeAppEngine();
-
-app.get('/product/:id', (req, res) => {
-  const {id}= req.params;
-
-  res.render('index', {
-    req,
-    res,
-    providers: [
-      {provide: 'prerender', useValue: {id}},
-    ]
-  });
-})
-
 /**
  * Example Express Rest API endpoints can be defined here.
  * Uncomment and define endpoints as necessary.

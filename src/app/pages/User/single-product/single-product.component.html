@@ -2,13 +2,13 @@
 <div class="single-product mt-14 mb-14">
   <div class="container">
     <div class="single-product__inner w-full h-full ">
-      <div class="product flex justify-between w-full h-[575px] max-tablet:flex-col max-tablet:h-full max-tablet:items-center max-tablet:gap-6">
+      <div class="product grid grid-cols-2 justify-between gap-40 max-tabletMax:grid-cols-1">
 
-        <div class="img w-[50%] h-full bg-Neutral/White/W100 flex justify-center items-center overflow-hidden max-tablet:w-full">
+        <div class="img w-full h-full bg-Neutral/White/W100 flex justify-center items-center overflow-hidden max-tablet:w-full">
           <img src="{{product?.img}}" alt="" class="w-[100%]">
         </div>
 
-        <div class="content w-[40%] flex flex-col gap-6 max-tablet:w-full max-tablet:gap-2">
+        <div class="content w-full flex flex-col gap-6 max-tablet:w-full max-tablet:gap-2">
           <h3 class="text-h3 font-bold">{{product?.title}}</h3>
           <div class="info">
             <div class="reviews"></div>
@@ -49,7 +49,7 @@
         <h3 class="text-h3 font-bold">You might also like</h3>
         <p class="text-p uppercase text-Neutral/Black/B400">SIMILAR PRODUCTS</p>
 
-        <div class="clothes mt-12 grid grid-cols-[repeat(auto-fit,minmax(0,237px))] justify-between max-tablet:grid-cols-2 max-tablet:gap-y-20 max-phone:grid-cols-1 max-phone:flex max-phone:flex-col max-phone:items-center ">
+        <div class="clothes mt-12 grid grid-cols-[repeat(auto-fit,minmax(0,237px))] justify-between gap-6 max-tabletMax:justify-center">
           <div class="box flex flex-col gap-6 cursor-pointer" *ngFor="let product of products" (click)="goToProduct(product.id)">
             <div class="img w-[237px] h-[312px] bg-Neutral/White/W100">
               <img src="{{product.img}}" alt="">
