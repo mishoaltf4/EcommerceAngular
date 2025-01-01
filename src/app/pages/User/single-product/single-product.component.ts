@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import {Router} from '@angular/router';
+import {TableComponent} from '../../../components/table/table.component';
 
 @Component({
   selector: 'app-single-product',
@@ -18,6 +19,7 @@ import {Router} from '@angular/router';
     CommonModule,
     MatIconModule,
     MatTabsModule,
+    TableComponent,
   ],
   templateUrl: './single-product.component.html',
   styleUrl: './single-product.component.scss'

@@ -8,4 +8,9 @@ export interface IProduct {
   quantity: 1;
   detail?: string;
   img: string;
+  reviews?: {
+    id: number,
+    uid: number,
+    content: string,
+  }[],
 }

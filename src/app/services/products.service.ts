@@ -19,6 +19,18 @@ export class ProductsService {
       img: 'images/Products/cover.png',
       detail: 'Elevate your everyday style with our Men\'s Black T-Shirts, the ultimate wardrobe essential for modern men. Crafted with meticulous attention to detail and designed for comfort, these versatile black tees are a must-have addition to your collection.\n' +
         'The classic black color never goes out of style. Whether you\'re dressing up for a special occasion or keeping it casual, these black t-shirts are the perfect choice, effortlessly complementing any outfit.',
+      reviews: [
+        {
+          id: 1,
+          uid: 1,
+          content: "The best top ever"
+        },
+        {
+          id: 2,
+          uid: 2,
+          content: "The best top ever By me"
+        },
+      ],
     },
     {
       id: 2,
@@ -28,7 +40,24 @@ export class ProductsService {
       color: 'blue',
       size: "small",
       quantity: 1,
-      img: 'images/Products/cover-1.png'
+      img: 'images/Products/cover-1.png',
+      reviews: [
+        {
+          id: 1,
+          uid: 1,
+          content: "The best top ever"
+        },
+        {
+          id: 2,
+          uid: 2,
+          content: "The best top ever By me"
+        },
+        {
+          id: 3,
+          uid: 3,
+          content: "The best top ever By me"
+        },
+      ],
     },
     {
       id: 3,

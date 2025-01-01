@@ -42,7 +42,11 @@
             <p class="text-p">{{product?.detail}}</p>
           </div>
         </mat-tab>
-        <mat-tab label="Reviews"></mat-tab>
+        <ng-container *ngIf="product">
+          <mat-tab label="Reviews">
+            <app-table [tableData]="product"/>
+          </mat-tab>
+        </ng-container>
       </mat-tab-group>
 
       <div class="more-products mt-[176px]">
