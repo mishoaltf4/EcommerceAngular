@@ -44,6 +44,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background: var(--dark-theme-body);
   color: #fff;
 
+  input{
+    background: transparent;
+  }
+
   header{
     background: var(--dark-theme-block);
   }

@@ -1,4 +1,4 @@
 <router-outlet/>
-<button (click)="toggleTheme()" class="rounded-full w-12 h-12  {{isDarkTheme ? 'bg-Neutral/White/W900' : 'bg-Neutral/Black/B800'}} fixed bottom-4 right-4 flex items-center justify-center">
-  <mat-icon class="{{isDarkTheme ? 'text-Neutral/Black/B900' : 'text-Neutral/White/W900'}}">{{isDarkTheme ? 'light_mode' : 'dark_mode'}}</mat-icon>
+<button (click)="toggleTheme()" class="rounded-full w-12 h-12  {{currentTheme === 'dark' ? 'bg-Neutral/White/W900' : 'bg-Neutral/Black/B800'}} fixed bottom-4 right-4 flex items-center justify-center">
+  <mat-icon class="{{currentTheme === 'dark' ? 'text-Neutral/Black/B900' : 'text-Neutral/White/W900'}}">{{currentTheme === 'dark' ? 'light_mode' : 'dark_mode'}}</mat-icon>
 </button>

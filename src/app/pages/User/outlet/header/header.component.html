@@ -5,13 +5,13 @@
   <div class="container">
     <div class="header-inner w-full h-full">
       <div class="header-bottom h-20 flex items-center justify-between max-tabletMax:justify-center">
-<!--        <img [src]="currentTheme === 'dark' ? '/images/whiteLogo.svg' : '/images/site-logo.svg'" alt="Logo" width="163px" height="41px" routerLink="/" class="cursor-pointer">-->
+        <img [src]="logo" alt="Logo" width="163px" height="41px" routerLink="/" class="cursor-pointer">
         <nav class="max-tabletMax:hidden">
           <ul>
             <li class="flex gap-8">
               <a routerLink="/">Home</a>
               <a>Category</a>
-              <a (click)="blog()">About</a>
+              <a>About</a>
               <a href="">Contact</a>
             </li>
           </ul>
@@ -19,13 +19,7 @@
 
         <div class="right flex items-center gap-2 max-[875px]:hidden">
           <div class="inputs">
-            <mat-form-field appearance="outline" class="custom-search-field">
-              <mat-icon matTextPrefix class="text-Neutral/Black/B400">search</mat-icon>
-              <input type="text" matInput [(ngModel)]="value" class="h-4">
-              @if (value) {
-                <mat-icon (click)="value=''" matSuffix class="cursor-pointer">close</mat-icon>
-              }
-            </mat-form-field>
+            <input type="text" placeholder="search...">
           </div>
           <mat-icon class="text-Neutral/Black/B500">shopping_cart</mat-icon>
           <mat-icon class="text-Neutral/Black/B500">account_circle</mat-icon>

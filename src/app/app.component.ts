@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {ThemeServiceService} from './services/theme-service.service';
 import { MatIconModule } from '@angular/material/icon';
@@ -9,22 +9,21 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent{
   title: string = 'EcommerceApp';
-  isDarkTheme: boolean = false;
-  constructor(private themeService: ThemeServiceService) { }
-
-  ngOnInit() {
-    this.themeService.initialTheme()
-    this.isDarkTheme = document.documentElement.classList.contains('dark');
+  currentTheme: string;
+  constructor(private themeService: ThemeServiceService) {
+    this.currentTheme = this.themeService.getCurrentTheme();
+    this.updateTheme();
   }
 
-  toggleTheme(): void{
-    this.isDarkTheme = !this.isDarkTheme;
-    if(this.isDarkTheme){
-      this.themeService.enableDarkThemeClass()
-    }else{
-      this.themeService.disableDarkThemeClass()
-    }
+  toggleTheme():void {
+    this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+    this.themeService.setTheme(this.currentTheme);
+    this.updateTheme();
+  }
+
+  private updateTheme(){
+    document.body.className = this.currentTheme;
   }
 }
